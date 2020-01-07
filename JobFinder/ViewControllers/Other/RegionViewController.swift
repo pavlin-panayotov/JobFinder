@@ -67,6 +67,9 @@ final class RegionViewController: TableViewController {
 			return
 		}
 		
-		
+		navigationController?.pushViewController(
+			JobViewController(job: job),
+			animated: true
+		)
 	}
 }
