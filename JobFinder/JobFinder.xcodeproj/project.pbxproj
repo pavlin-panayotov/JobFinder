@@ -13,6 +13,12 @@
 		856F1EE823C5141700EB81F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856F1EE623C5141700EB81F3 /* LaunchScreen.storyboard */; };
 		856F1EF223C5186D00EB81F3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1EF123C5186D00EB81F3 /* TabBarController.swift */; };
 		856F1EF523C5195C00EB81F3 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1EF423C5195C00EB81F3 /* NavigationController.swift */; };
+		856F1EF823C51AA100EB81F3 /* jobs.json in Resources */ = {isa = PBXBuildFile; fileRef = 856F1EF723C51AA000EB81F3 /* jobs.json */; };
+		856F1EFD23C51B0500EB81F3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1EFC23C51B0500EB81F3 /* DataManager.swift */; };
+		856F1F0023C51B2500EB81F3 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1EFF23C51B2500EB81F3 /* Job.swift */; };
+		856F1F0223C51B4C00EB81F3 /* ContractType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F0123C51B4C00EB81F3 /* ContractType.swift */; };
+		856F1F0423C51B7B00EB81F3 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F0323C51B7B00EB81F3 /* Region.swift */; };
+		856F1F0723C51BB300EB81F3 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F0623C51BB300EB81F3 /* Typealias.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		856F1EE923C5141700EB81F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		856F1EF123C5186D00EB81F3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		856F1EF423C5195C00EB81F3 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		856F1EF723C51AA000EB81F3 /* jobs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jobs.json; sourceTree = "<group>"; };
+		856F1EFC23C51B0500EB81F3 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		856F1EFF23C51B2500EB81F3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		856F1F0123C51B4C00EB81F3 /* ContractType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractType.swift; sourceTree = "<group>"; };
+		856F1F0323C51B7B00EB81F3 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		856F1F0623C51BB300EB81F3 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,10 @@
 		856F1EDA23C5141500EB81F3 /* JobFinder */ = {
 			isa = PBXGroup;
 			children = (
+				856F1F0523C51B9D00EB81F3 /* Constants */,
+				856F1EFE23C51B1700EB81F3 /* Models */,
+				856F1EFB23C51AEC00EB81F3 /* Managers */,
+				856F1EF623C51A8600EB81F3 /* Resources */,
 				856F1EEF23C5184F00EB81F3 /* ViewControllers */,
 				856F1EDB23C5141500EB81F3 /* AppDelegate.swift */,
 				856F1EDD23C5141500EB81F3 /* SceneDelegate.swift */,
@@ -89,6 +105,40 @@
 				856F1EF423C5195C00EB81F3 /* NavigationController.swift */,
 			);
 			path = NavigationControllers;
+			sourceTree = "<group>";
+		};
+		856F1EF623C51A8600EB81F3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				856F1EF723C51AA000EB81F3 /* jobs.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		856F1EFB23C51AEC00EB81F3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				856F1EFC23C51B0500EB81F3 /* DataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		856F1EFE23C51B1700EB81F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				856F1EFF23C51B2500EB81F3 /* Job.swift */,
+				856F1F0123C51B4C00EB81F3 /* ContractType.swift */,
+				856F1F0323C51B7B00EB81F3 /* Region.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		856F1F0523C51B9D00EB81F3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				856F1F0623C51BB300EB81F3 /* Typealias.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856F1EF823C51AA100EB81F3 /* jobs.json in Resources */,
 				856F1EE823C5141700EB81F3 /* LaunchScreen.storyboard in Resources */,
 				856F1EE523C5141700EB81F3 /* Assets.xcassets in Resources */,
 			);
@@ -162,9 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				856F1EF223C5186D00EB81F3 /* TabBarController.swift in Sources */,
+				856F1F0723C51BB300EB81F3 /* Typealias.swift in Sources */,
+				856F1F0023C51B2500EB81F3 /* Job.swift in Sources */,
+				856F1EFD23C51B0500EB81F3 /* DataManager.swift in Sources */,
+				856F1F0423C51B7B00EB81F3 /* Region.swift in Sources */,
 				856F1EF523C5195C00EB81F3 /* NavigationController.swift in Sources */,
 				856F1EDC23C5141500EB81F3 /* AppDelegate.swift in Sources */,
 				856F1EDE23C5141500EB81F3 /* SceneDelegate.swift in Sources */,
+				856F1F0223C51B4C00EB81F3 /* ContractType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
