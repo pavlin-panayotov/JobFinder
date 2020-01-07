@@ -38,6 +38,8 @@
 		856F1F3623C5219E00EB81F3 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F3523C5219E00EB81F3 /* JobViewController.swift */; };
 		856F1F3923C521DE00EB81F3 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856F1F3723C521DE00EB81F3 /* DetailsTableViewCell.xib */; };
 		856F1F3A23C521DE00EB81F3 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F3823C521DE00EB81F3 /* DetailsTableViewCell.swift */; };
+		856F1F4223C5241500EB81F3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F4123C5241500EB81F3 /* Constant.swift */; };
+		856F1F4423C5245800EB81F3 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F4323C5245800EB81F3 /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		856F1F3523C5219E00EB81F3 /* JobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
 		856F1F3723C521DE00EB81F3 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
 		856F1F3823C521DE00EB81F3 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
+		856F1F4123C5241500EB81F3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		856F1F4323C5245800EB81F3 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				856F1F0623C51BB300EB81F3 /* Typealias.swift */,
+				856F1F4123C5241500EB81F3 /* Constant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 		856F1F0F23C51E6500EB81F3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				856F1F4323C5245800EB81F3 /* AboutUsViewController.swift */,
 				856F1F3523C5219E00EB81F3 /* JobViewController.swift */,
 				856F1F3123C5211700EB81F3 /* RegionsViewController.swift */,
 				856F1F3223C5211700EB81F3 /* RegionViewController.swift */,
@@ -337,11 +343,13 @@
 				856F1F3623C5219E00EB81F3 /* JobViewController.swift in Sources */,
 				856F1F3A23C521DE00EB81F3 /* DetailsTableViewCell.swift in Sources */,
 				856F1F1923C51F1900EB81F3 /* TableViewCell.swift in Sources */,
+				856F1F4223C5241500EB81F3 /* Constant.swift in Sources */,
 				856F1F2823C51F6E00EB81F3 /* UIStackView+Subviews.swift in Sources */,
 				856F1F3323C5211700EB81F3 /* RegionsViewController.swift in Sources */,
 				856F1EFD23C51B0500EB81F3 /* DataManager.swift in Sources */,
 				856F1F0423C51B7B00EB81F3 /* Region.swift in Sources */,
 				856F1F3423C5211700EB81F3 /* RegionViewController.swift in Sources */,
+				856F1F4423C5245800EB81F3 /* AboutUsViewController.swift in Sources */,
 				856F1F1723C51EE600EB81F3 /* RegionTableViewCell.swift in Sources */,
 				856F1F0E23C51E2C00EB81F3 /* TableViewController.swift in Sources */,
 				856F1EF523C5195C00EB81F3 /* NavigationController.swift in Sources */,
