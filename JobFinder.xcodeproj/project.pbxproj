@@ -40,6 +40,11 @@
 		856F1F3A23C521DE00EB81F3 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F3823C521DE00EB81F3 /* DetailsTableViewCell.swift */; };
 		856F1F4223C5241500EB81F3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F4123C5241500EB81F3 /* Constant.swift */; };
 		856F1F4423C5245800EB81F3 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F4323C5245800EB81F3 /* AboutUsViewController.swift */; };
+		856F1F4623C524E500EB81F3 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F4523C524E500EB81F3 /* Filter.swift */; };
+		856F1F4923C5251B00EB81F3 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F4723C5251B00EB81F3 /* ScrollViewController.swift */; };
+		856F1F4A23C5251B00EB81F3 /* ScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856F1F4823C5251B00EB81F3 /* ScrollViewController.xib */; };
+		856F1F4D23C5253A00EB81F3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F4B23C5253A00EB81F3 /* SearchViewController.swift */; };
+		856F1F4E23C5253A00EB81F3 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F4C23C5253A00EB81F3 /* SearchResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +83,11 @@
 		856F1F3823C521DE00EB81F3 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 		856F1F4123C5241500EB81F3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		856F1F4323C5245800EB81F3 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		856F1F4523C524E500EB81F3 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		856F1F4723C5251B00EB81F3 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		856F1F4823C5251B00EB81F3 /* ScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollViewController.xib; sourceTree = "<group>"; };
+		856F1F4B23C5253A00EB81F3 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		856F1F4C23C5253A00EB81F3 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				856F1F0123C51B4C00EB81F3 /* ContractType.swift */,
+				856F1F4523C524E500EB81F3 /* Filter.swift */,
 				856F1EFF23C51B2500EB81F3 /* Job.swift */,
 				856F1F0323C51B7B00EB81F3 /* Region.swift */,
 			);
@@ -182,8 +193,8 @@
 		856F1F0523C51B9D00EB81F3 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				856F1F0623C51BB300EB81F3 /* Typealias.swift */,
 				856F1F4123C5241500EB81F3 /* Constant.swift */,
+				856F1F0623C51BB300EB81F3 /* Typealias.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -191,6 +202,8 @@
 		856F1F0823C51DE200EB81F3 /* Parents */ = {
 			isa = PBXGroup;
 			children = (
+				856F1F4723C5251B00EB81F3 /* ScrollViewController.swift */,
+				856F1F4823C5251B00EB81F3 /* ScrollViewController.xib */,
 				856F1F0C23C51E2C00EB81F3 /* TableViewController.swift */,
 				856F1F0B23C51E2C00EB81F3 /* TableViewController.xib */,
 				856F1F2F23C520DF00EB81F3 /* ViewController.swift */,
@@ -205,6 +218,8 @@
 				856F1F3523C5219E00EB81F3 /* JobViewController.swift */,
 				856F1F3123C5211700EB81F3 /* RegionsViewController.swift */,
 				856F1F3223C5211700EB81F3 /* RegionViewController.swift */,
+				856F1F4C23C5253A00EB81F3 /* SearchResultsViewController.swift */,
+				856F1F4B23C5253A00EB81F3 /* SearchViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -325,6 +340,7 @@
 				856F1F0D23C51E2C00EB81F3 /* TableViewController.xib in Resources */,
 				856F1F2E23C5203E00EB81F3 /* JobTableViewCell.xib in Resources */,
 				856F1F3923C521DE00EB81F3 /* DetailsTableViewCell.xib in Resources */,
+				856F1F4A23C5251B00EB81F3 /* ScrollViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +354,7 @@
 				856F1F2623C51F6E00EB81F3 /* UIColor+Highlight.swift in Sources */,
 				856F1EF223C5186D00EB81F3 /* TabBarController.swift in Sources */,
 				856F1F0723C51BB300EB81F3 /* Typealias.swift in Sources */,
+				856F1F4923C5251B00EB81F3 /* ScrollViewController.swift in Sources */,
 				856F1F3023C520DF00EB81F3 /* ViewController.swift in Sources */,
 				856F1F0023C51B2500EB81F3 /* Job.swift in Sources */,
 				856F1F3623C5219E00EB81F3 /* JobViewController.swift in Sources */,
@@ -353,6 +370,7 @@
 				856F1F1723C51EE600EB81F3 /* RegionTableViewCell.swift in Sources */,
 				856F1F0E23C51E2C00EB81F3 /* TableViewController.swift in Sources */,
 				856F1EF523C5195C00EB81F3 /* NavigationController.swift in Sources */,
+				856F1F4E23C5253A00EB81F3 /* SearchResultsViewController.swift in Sources */,
 				856F1EDC23C5141500EB81F3 /* AppDelegate.swift in Sources */,
 				856F1F2D23C5203E00EB81F3 /* JobTableViewCell.swift in Sources */,
 				856F1F2423C51F6E00EB81F3 /* UITableViewCell+Id.swift in Sources */,
@@ -360,7 +378,9 @@
 				856F1F2523C51F6E00EB81F3 /* UITableView+Cells.swift in Sources */,
 				856F1F2723C51F6E00EB81F3 /* UIEdgeInsets+Inits.swift in Sources */,
 				856F1EDE23C5141500EB81F3 /* SceneDelegate.swift in Sources */,
+				856F1F4623C524E500EB81F3 /* Filter.swift in Sources */,
 				856F1F0223C51B4C00EB81F3 /* ContractType.swift in Sources */,
+				856F1F4D23C5253A00EB81F3 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

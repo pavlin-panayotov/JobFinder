@@ -48,4 +48,9 @@ final class DataManager {
 		}
 		regions.sort(by: { $0.name < $1.name })
 	}
+	
+	// MARK: - Public
+	func jobs(forFilter filter: Filter) -> [Job] {
+		return jobs.filter(filter.isJobMatching)
+	}
 }

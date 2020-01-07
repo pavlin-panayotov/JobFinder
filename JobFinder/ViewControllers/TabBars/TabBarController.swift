@@ -15,25 +15,12 @@ final class TabBarController: UITabBarController {
 		
 		viewControllers = [
 			createRegionsController(),
-			createViewController(tag: 1),
+			createSearchViewController(),
 			createAboutUsController()
 		]
 	}
 	
 	// MARK: - Private
-	private func createViewController(tag: Int) -> UIViewController {
-		let viewController = UIViewController()
-		viewController.view.backgroundColor = .white
-		let navigationController = NavigationController(
-			rootViewController: viewController
-		)
-		navigationController.tabBarItem = UITabBarItem(
-			tabBarSystemItem: .favorites,
-			tag: tag
-		)
-		return navigationController
-	}
-	
 	private func createRegionsController() -> UIViewController {
 		let navigationController = NavigationController(
 			rootViewController: RegionsViewController()
@@ -41,6 +28,17 @@ final class TabBarController: UITabBarController {
 		navigationController.tabBarItem = UITabBarItem(
 			tabBarSystemItem: .favorites,
 			tag: 0
+		)
+		return navigationController
+	}
+	
+	private func createSearchViewController() -> UIViewController {
+		let navigationController = NavigationController(
+			rootViewController: SearchViewController()
+		)
+		navigationController.tabBarItem = UITabBarItem(
+			tabBarSystemItem: .search,
+			tag: 1
 		)
 		return navigationController
 	}
