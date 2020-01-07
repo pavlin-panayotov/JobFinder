@@ -19,6 +19,19 @@
 		856F1F0223C51B4C00EB81F3 /* ContractType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F0123C51B4C00EB81F3 /* ContractType.swift */; };
 		856F1F0423C51B7B00EB81F3 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F0323C51B7B00EB81F3 /* Region.swift */; };
 		856F1F0723C51BB300EB81F3 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F0623C51BB300EB81F3 /* Typealias.swift */; };
+		856F1F0A23C51DF400EB81F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F0923C51DF400EB81F3 /* ViewController.swift */; };
+		856F1F0D23C51E2C00EB81F3 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856F1F0B23C51E2C00EB81F3 /* TableViewController.xib */; };
+		856F1F0E23C51E2C00EB81F3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F0C23C51E2C00EB81F3 /* TableViewController.swift */; };
+		856F1F1123C51E7E00EB81F3 /* RegionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F1023C51E7E00EB81F3 /* RegionsViewController.swift */; };
+		856F1F1623C51EE600EB81F3 /* RegionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856F1F1423C51EE600EB81F3 /* RegionTableViewCell.xib */; };
+		856F1F1723C51EE600EB81F3 /* RegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F1523C51EE600EB81F3 /* RegionTableViewCell.swift */; };
+		856F1F1923C51F1900EB81F3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F1823C51F1900EB81F3 /* TableViewCell.swift */; };
+		856F1F1E23C51F6200EB81F3 /* Array+Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F1D23C51F6200EB81F3 /* Array+Elements.swift */; };
+		856F1F2423C51F6E00EB81F3 /* UITableViewCell+Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F1F23C51F6D00EB81F3 /* UITableViewCell+Id.swift */; };
+		856F1F2523C51F6E00EB81F3 /* UITableView+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F2023C51F6D00EB81F3 /* UITableView+Cells.swift */; };
+		856F1F2623C51F6E00EB81F3 /* UIColor+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F2123C51F6E00EB81F3 /* UIColor+Highlight.swift */; };
+		856F1F2723C51F6E00EB81F3 /* UIEdgeInsets+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F2223C51F6E00EB81F3 /* UIEdgeInsets+Inits.swift */; };
+		856F1F2823C51F6E00EB81F3 /* UIStackView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F2323C51F6E00EB81F3 /* UIStackView+Subviews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +49,19 @@
 		856F1F0123C51B4C00EB81F3 /* ContractType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractType.swift; sourceTree = "<group>"; };
 		856F1F0323C51B7B00EB81F3 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		856F1F0623C51BB300EB81F3 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		856F1F0923C51DF400EB81F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../../Documents/ViewController.swift; sourceTree = "<group>"; };
+		856F1F0B23C51E2C00EB81F3 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		856F1F0C23C51E2C00EB81F3 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		856F1F1023C51E7E00EB81F3 /* RegionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegionsViewController.swift; path = ../../../../../Documents/RegionsViewController.swift; sourceTree = "<group>"; };
+		856F1F1423C51EE600EB81F3 /* RegionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegionTableViewCell.xib; sourceTree = "<group>"; };
+		856F1F1523C51EE600EB81F3 /* RegionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionTableViewCell.swift; sourceTree = "<group>"; };
+		856F1F1823C51F1900EB81F3 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		856F1F1D23C51F6200EB81F3 /* Array+Elements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Elements.swift"; sourceTree = "<group>"; };
+		856F1F1F23C51F6D00EB81F3 /* UITableViewCell+Id.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Id.swift"; sourceTree = "<group>"; };
+		856F1F2023C51F6D00EB81F3 /* UITableView+Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Cells.swift"; sourceTree = "<group>"; };
+		856F1F2123C51F6E00EB81F3 /* UIColor+Highlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Highlight.swift"; sourceTree = "<group>"; };
+		856F1F2223C51F6E00EB81F3 /* UIEdgeInsets+Inits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Inits.swift"; sourceTree = "<group>"; };
+		856F1F2323C51F6E00EB81F3 /* UIStackView+Subviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Subviews.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +94,8 @@
 		856F1EDA23C5141500EB81F3 /* JobFinder */ = {
 			isa = PBXGroup;
 			children = (
+				856F1F1A23C51F3500EB81F3 /* Extensions */,
+				856F1F1223C51EC500EB81F3 /* Cells */,
 				856F1F0523C51B9D00EB81F3 /* Constants */,
 				856F1EFE23C51B1700EB81F3 /* Models */,
 				856F1EFB23C51AEC00EB81F3 /* Managers */,
@@ -85,7 +113,9 @@
 		856F1EEF23C5184F00EB81F3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				856F1F0F23C51E6500EB81F3 /* Other */,
 				856F1EF323C5193500EB81F3 /* NavigationControllers */,
+				856F1F0823C51DE200EB81F3 /* Parents */,
 				856F1EF023C5185C00EB81F3 /* TabBars */,
 			);
 			path = ViewControllers;
@@ -126,8 +156,8 @@
 		856F1EFE23C51B1700EB81F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				856F1EFF23C51B2500EB81F3 /* Job.swift */,
 				856F1F0123C51B4C00EB81F3 /* ContractType.swift */,
+				856F1EFF23C51B2500EB81F3 /* Job.swift */,
 				856F1F0323C51B7B00EB81F3 /* Region.swift */,
 			);
 			path = Models;
@@ -139,6 +169,71 @@
 				856F1F0623C51BB300EB81F3 /* Typealias.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		856F1F0823C51DE200EB81F3 /* Parents */ = {
+			isa = PBXGroup;
+			children = (
+				856F1F0C23C51E2C00EB81F3 /* TableViewController.swift */,
+				856F1F0B23C51E2C00EB81F3 /* TableViewController.xib */,
+				856F1F0923C51DF400EB81F3 /* ViewController.swift */,
+			);
+			path = Parents;
+			sourceTree = "<group>";
+		};
+		856F1F0F23C51E6500EB81F3 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				856F1F1023C51E7E00EB81F3 /* RegionsViewController.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		856F1F1223C51EC500EB81F3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				856F1F1323C51ECA00EB81F3 /* TableView */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		856F1F1323C51ECA00EB81F3 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				856F1F1823C51F1900EB81F3 /* TableViewCell.swift */,
+				856F1F1523C51EE600EB81F3 /* RegionTableViewCell.swift */,
+				856F1F1423C51EE600EB81F3 /* RegionTableViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		856F1F1A23C51F3500EB81F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				856F1F1C23C51F4C00EB81F3 /* Foundation */,
+				856F1F1B23C51F4000EB81F3 /* UI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		856F1F1B23C51F4000EB81F3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				856F1F2123C51F6E00EB81F3 /* UIColor+Highlight.swift */,
+				856F1F2223C51F6E00EB81F3 /* UIEdgeInsets+Inits.swift */,
+				856F1F2323C51F6E00EB81F3 /* UIStackView+Subviews.swift */,
+				856F1F2023C51F6D00EB81F3 /* UITableView+Cells.swift */,
+				856F1F1F23C51F6D00EB81F3 /* UITableViewCell+Id.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		856F1F1C23C51F4C00EB81F3 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				856F1F1D23C51F6200EB81F3 /* Array+Elements.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				856F1EF823C51AA100EB81F3 /* jobs.json in Resources */,
+				856F1F1623C51EE600EB81F3 /* RegionTableViewCell.xib in Resources */,
 				856F1EE823C5141700EB81F3 /* LaunchScreen.storyboard in Resources */,
 				856F1EE523C5141700EB81F3 /* Assets.xcassets in Resources */,
+				856F1F0D23C51E2C00EB81F3 /* TableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,13 +309,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856F1F2623C51F6E00EB81F3 /* UIColor+Highlight.swift in Sources */,
+				856F1F0A23C51DF400EB81F3 /* ViewController.swift in Sources */,
 				856F1EF223C5186D00EB81F3 /* TabBarController.swift in Sources */,
 				856F1F0723C51BB300EB81F3 /* Typealias.swift in Sources */,
 				856F1F0023C51B2500EB81F3 /* Job.swift in Sources */,
+				856F1F1123C51E7E00EB81F3 /* RegionsViewController.swift in Sources */,
+				856F1F1923C51F1900EB81F3 /* TableViewCell.swift in Sources */,
+				856F1F2823C51F6E00EB81F3 /* UIStackView+Subviews.swift in Sources */,
 				856F1EFD23C51B0500EB81F3 /* DataManager.swift in Sources */,
 				856F1F0423C51B7B00EB81F3 /* Region.swift in Sources */,
+				856F1F1723C51EE600EB81F3 /* RegionTableViewCell.swift in Sources */,
+				856F1F0E23C51E2C00EB81F3 /* TableViewController.swift in Sources */,
 				856F1EF523C5195C00EB81F3 /* NavigationController.swift in Sources */,
 				856F1EDC23C5141500EB81F3 /* AppDelegate.swift in Sources */,
+				856F1F2423C51F6E00EB81F3 /* UITableViewCell+Id.swift in Sources */,
+				856F1F1E23C51F6200EB81F3 /* Array+Elements.swift in Sources */,
+				856F1F2523C51F6E00EB81F3 /* UITableView+Cells.swift in Sources */,
+				856F1F2723C51F6E00EB81F3 /* UIEdgeInsets+Inits.swift in Sources */,
 				856F1EDE23C5141500EB81F3 /* SceneDelegate.swift in Sources */,
 				856F1F0223C51B4C00EB81F3 /* ContractType.swift in Sources */,
 			);

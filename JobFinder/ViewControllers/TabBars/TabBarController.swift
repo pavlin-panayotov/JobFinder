@@ -14,7 +14,7 @@ final class TabBarController: UITabBarController {
 		super.viewDidLoad()
 		
 		viewControllers = [
-			createViewController(tag: 0),
+			createRegionsController(),
 			createViewController(tag: 1),
 			createViewController(tag: 2)
 		]
@@ -30,6 +30,17 @@ final class TabBarController: UITabBarController {
 		navigationController.tabBarItem = UITabBarItem(
 			tabBarSystemItem: .favorites,
 			tag: tag
+		)
+		return navigationController
+	}
+	
+	private func createRegionsController() -> UIViewController {
+		let navigationController = NavigationController(
+			rootViewController: RegionsViewController()
+		)
+		navigationController.tabBarItem = UITabBarItem(
+			tabBarSystemItem: .contacts,
+			tag: 0
 		)
 		return navigationController
 	}
