@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852F5DF523C65E22002B01C8 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F5DF423C65E22002B01C8 /* NibView.swift */; };
+		852F5DF723C660FF002B01C8 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F5DF623C660FF002B01C8 /* UIView+Subviews.swift */; };
+		852F5DF923C661CD002B01C8 /* NSLayoutConstraint+Activate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F5DF823C661CD002B01C8 /* NSLayoutConstraint+Activate.swift */; };
+		852F5DFB23C662C2002B01C8 /* NSLayoutConstraint+Deactivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F5DFA23C662C2002B01C8 /* NSLayoutConstraint+Deactivate.swift */; };
+		852F5DFD23C663F8002B01C8 /* SalaryRangePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F5DFC23C663F8002B01C8 /* SalaryRangePickerView.swift */; };
+		852F5DFF23C66418002B01C8 /* SalaryRangePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 852F5DFE23C66418002B01C8 /* SalaryRangePickerView.xib */; };
+		852F5E0123C6770E002B01C8 /* String+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F5E0023C6770E002B01C8 /* String+Inits.swift */; };
 		856F1EDC23C5141500EB81F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1EDB23C5141500EB81F3 /* AppDelegate.swift */; };
 		856F1EDE23C5141500EB81F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1EDD23C5141500EB81F3 /* SceneDelegate.swift */; };
 		856F1EE523C5141700EB81F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856F1EE423C5141700EB81F3 /* Assets.xcassets */; };
@@ -48,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		852F5DF423C65E22002B01C8 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		852F5DF623C660FF002B01C8 /* UIView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subviews.swift"; sourceTree = "<group>"; };
+		852F5DF823C661CD002B01C8 /* NSLayoutConstraint+Activate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Activate.swift"; sourceTree = "<group>"; };
+		852F5DFA23C662C2002B01C8 /* NSLayoutConstraint+Deactivate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Deactivate.swift"; sourceTree = "<group>"; };
+		852F5DFC23C663F8002B01C8 /* SalaryRangePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryRangePickerView.swift; sourceTree = "<group>"; };
+		852F5DFE23C66418002B01C8 /* SalaryRangePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalaryRangePickerView.xib; sourceTree = "<group>"; };
+		852F5E0023C6770E002B01C8 /* String+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Inits.swift"; sourceTree = "<group>"; };
 		856F1ED823C5141500EB81F3 /* JobFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		856F1EDB23C5141500EB81F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		856F1EDD23C5141500EB81F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +115,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		852F5DF123C65CA8002B01C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				852F5DF323C65DE0002B01C8 /* Other */,
+				852F5DF223C65DDA002B01C8 /* Parents */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		852F5DF223C65DDA002B01C8 /* Parents */ = {
+			isa = PBXGroup;
+			children = (
+				852F5DF423C65E22002B01C8 /* NibView.swift */,
+			);
+			path = Parents;
+			sourceTree = "<group>";
+		};
+		852F5DF323C65DE0002B01C8 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				852F5DFC23C663F8002B01C8 /* SalaryRangePickerView.swift */,
+				852F5DFE23C66418002B01C8 /* SalaryRangePickerView.xib */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		856F1ECF23C5141500EB81F3 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +160,7 @@
 		856F1EDA23C5141500EB81F3 /* JobFinder */ = {
 			isa = PBXGroup;
 			children = (
+				852F5DF123C65CA8002B01C8 /* Views */,
 				856F1F1A23C51F3500EB81F3 /* Extensions */,
 				856F1F1223C51EC500EB81F3 /* Cells */,
 				856F1F0523C51B9D00EB81F3 /* Constants */,
@@ -250,27 +291,31 @@
 			isa = PBXGroup;
 			children = (
 				856F1F1C23C51F4C00EB81F3 /* Foundation */,
-				856F1F1B23C51F4000EB81F3 /* UI */,
+				856F1F1B23C51F4000EB81F3 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		856F1F1B23C51F4000EB81F3 /* UI */ = {
+		856F1F1B23C51F4000EB81F3 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				852F5DF823C661CD002B01C8 /* NSLayoutConstraint+Activate.swift */,
+				852F5DFA23C662C2002B01C8 /* NSLayoutConstraint+Deactivate.swift */,
 				856F1F2123C51F6E00EB81F3 /* UIColor+Highlight.swift */,
 				856F1F2223C51F6E00EB81F3 /* UIEdgeInsets+Inits.swift */,
 				856F1F2323C51F6E00EB81F3 /* UIStackView+Subviews.swift */,
 				856F1F2023C51F6D00EB81F3 /* UITableView+Cells.swift */,
 				856F1F1F23C51F6D00EB81F3 /* UITableViewCell+Id.swift */,
+				852F5DF623C660FF002B01C8 /* UIView+Subviews.swift */,
 			);
-			path = UI;
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		856F1F1C23C51F4C00EB81F3 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
 				856F1F1D23C51F6200EB81F3 /* Array+Elements.swift */,
+				852F5E0023C6770E002B01C8 /* String+Inits.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -335,6 +380,7 @@
 			files = (
 				856F1EF823C51AA100EB81F3 /* jobs.json in Resources */,
 				856F1F1623C51EE600EB81F3 /* RegionTableViewCell.xib in Resources */,
+				852F5DFF23C66418002B01C8 /* SalaryRangePickerView.xib in Resources */,
 				856F1EE823C5141700EB81F3 /* LaunchScreen.storyboard in Resources */,
 				856F1EE523C5141700EB81F3 /* Assets.xcassets in Resources */,
 				856F1F0D23C51E2C00EB81F3 /* TableViewController.xib in Resources */,
@@ -351,7 +397,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852F5DFD23C663F8002B01C8 /* SalaryRangePickerView.swift in Sources */,
 				856F1F2623C51F6E00EB81F3 /* UIColor+Highlight.swift in Sources */,
+				852F5E0123C6770E002B01C8 /* String+Inits.swift in Sources */,
 				856F1EF223C5186D00EB81F3 /* TabBarController.swift in Sources */,
 				856F1F0723C51BB300EB81F3 /* Typealias.swift in Sources */,
 				856F1F4923C5251B00EB81F3 /* ScrollViewController.swift in Sources */,
@@ -359,9 +407,12 @@
 				856F1F0023C51B2500EB81F3 /* Job.swift in Sources */,
 				856F1F3623C5219E00EB81F3 /* JobViewController.swift in Sources */,
 				856F1F3A23C521DE00EB81F3 /* DetailsTableViewCell.swift in Sources */,
+				852F5DF523C65E22002B01C8 /* NibView.swift in Sources */,
 				856F1F1923C51F1900EB81F3 /* TableViewCell.swift in Sources */,
 				856F1F4223C5241500EB81F3 /* Constant.swift in Sources */,
+				852F5DFB23C662C2002B01C8 /* NSLayoutConstraint+Deactivate.swift in Sources */,
 				856F1F2823C51F6E00EB81F3 /* UIStackView+Subviews.swift in Sources */,
+				852F5DF723C660FF002B01C8 /* UIView+Subviews.swift in Sources */,
 				856F1F3323C5211700EB81F3 /* RegionsViewController.swift in Sources */,
 				856F1EFD23C51B0500EB81F3 /* DataManager.swift in Sources */,
 				856F1F0423C51B7B00EB81F3 /* Region.swift in Sources */,
@@ -373,6 +424,7 @@
 				856F1F4E23C5253A00EB81F3 /* SearchResultsViewController.swift in Sources */,
 				856F1EDC23C5141500EB81F3 /* AppDelegate.swift in Sources */,
 				856F1F2D23C5203E00EB81F3 /* JobTableViewCell.swift in Sources */,
+				852F5DF923C661CD002B01C8 /* NSLayoutConstraint+Activate.swift in Sources */,
 				856F1F2423C51F6E00EB81F3 /* UITableViewCell+Id.swift in Sources */,
 				856F1F1E23C51F6200EB81F3 /* Array+Elements.swift in Sources */,
 				856F1F2523C51F6E00EB81F3 /* UITableView+Cells.swift in Sources */,

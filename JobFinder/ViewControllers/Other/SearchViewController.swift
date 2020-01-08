@@ -32,6 +32,15 @@ final class SearchViewController: ScrollViewController {
 		return button
 	}()
 	
+	private lazy var salaryPickerView: SalaryRangePickerView = {
+		let pickerView = SalaryRangePickerView()
+		pickerView.config(
+			title: "Минимална заплата",
+			salaryRange: 0...DataManager.shared.greatestSalary
+		)
+		return pickerView
+	}()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -40,6 +49,7 @@ final class SearchViewController: ScrollViewController {
 		
 		addScrollSubviews(
 			textField,
+			salaryPickerView,
 			searchButton
 		)
 	}
@@ -47,7 +57,10 @@ final class SearchViewController: ScrollViewController {
 	// MARK: - Actions
 	@objc
 	private func searchButtonTapped(_ sender: Any) {
-		let filter = Filter(text: textField.text)
+		let filter = Filter(
+			text: textField.text,
+			minimumSalary: salaryPickerView.minimumSalary
+		)
 		let results = DataManager.shared.jobs(forFilter: filter)
 		
 		navigationController?.pushViewController(

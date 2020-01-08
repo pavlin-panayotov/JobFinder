@@ -14,6 +14,7 @@ final class DataManager {
 	
 	private var jobs: [Job] = []
 	private(set) var regions: [Region] = []
+	private(set) var greatestSalary = 0
 	
 	init() {
 		loadData()
@@ -34,6 +35,8 @@ final class DataManager {
 		
 		self.jobs = jobs.compactMap { Job(data: $0) }
 		self.jobs.forEach { (job) in
+			greatestSalary = max(job.salary ?? 0, greatestSalary)
+			
 			if let region = regions.first(where: { $0.id == job.regionId }) {
 				region.add(job: job)
 				return

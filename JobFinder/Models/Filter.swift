@@ -11,10 +11,18 @@ import Foundation
 struct Filter {
 	
 	let text: String?
+	let minimumSalary: Int
 	
 	// MARK: - Public
 	func isJobMatching(_ job: Job) -> Bool {
-		if let textUnwrapped = text, job.name.contains(textUnwrapped) == false {
+		if let textUnwrapped = text,
+			textUnwrapped.isEmpty == false,
+			job.name.contains(textUnwrapped) == false {
+			
+			return false
+		}
+		
+		if minimumSalary > 0 && minimumSalary > (job.salary ?? 0) {
 			return false
 		}
 		
