@@ -14,7 +14,7 @@ final class SearchViewController: ScrollViewController {
 		let textField = UITextField()
 		textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
 		textField.borderStyle = .line
-		textField.placeholder = "Техт за търсене"
+		textField.placeholder = "Позиция"
 		return textField
 	}()
 	
@@ -41,15 +41,20 @@ final class SearchViewController: ScrollViewController {
 		return pickerView
 	}()
 	
+	private let locationPickerView = LocationPickerView()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		title = "Търсене"
 		scrollSubviewsInsets = UIEdgeInsets(inset: 20)
 		
+		setupLocationPickerView()
+		
 		addScrollSubviews(
 			textField,
 			salaryPickerView,
+			locationPickerView,
 			searchButton
 		)
 	}
@@ -59,7 +64,8 @@ final class SearchViewController: ScrollViewController {
 	private func searchButtonTapped(_ sender: Any) {
 		let filter = Filter(
 			text: textField.text,
-			minimumSalary: salaryPickerView.minimumSalary
+			minimumSalary: salaryPickerView.minimumSalary,
+			region: locationPickerView.selectedRegion
 		)
 		let results = DataManager.shared.jobs(forFilter: filter)
 		
@@ -67,5 +73,10 @@ final class SearchViewController: ScrollViewController {
 			SearchResultsViewController(jobs: results),
 			animated: true
 		)
+	}
+	
+	// MARK: - Private
+	private func setupLocationPickerView() {
+		locationPickerView.regions = DataManager.shared.regions.map { $0.name }
 	}
 }

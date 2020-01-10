@@ -52,6 +52,11 @@
 		856F1F4A23C5251B00EB81F3 /* ScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856F1F4823C5251B00EB81F3 /* ScrollViewController.xib */; };
 		856F1F4D23C5253A00EB81F3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F4B23C5253A00EB81F3 /* SearchViewController.swift */; };
 		856F1F4E23C5253A00EB81F3 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1F4C23C5253A00EB81F3 /* SearchResultsViewController.swift */; };
+		85CB4CF223C7B413006E126A /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB4CF123C7B413006E126A /* Dropdown.swift */; };
+		85CB4CF423C7B425006E126A /* Dropdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85CB4CF323C7B425006E126A /* Dropdown.xib */; };
+		85CB4CF623C7B830006E126A /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB4CF523C7B830006E126A /* LocationPickerView.swift */; };
+		85CB4CF823C7B84C006E126A /* LocationPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85CB4CF723C7B84C006E126A /* LocationPickerView.xib */; };
+		85ED9DAD23C8F295002966F0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED9DAC23C8F295002966F0 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +107,11 @@
 		856F1F4823C5251B00EB81F3 /* ScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollViewController.xib; sourceTree = "<group>"; };
 		856F1F4B23C5253A00EB81F3 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		856F1F4C23C5253A00EB81F3 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		85CB4CF123C7B413006E126A /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		85CB4CF323C7B425006E126A /* Dropdown.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Dropdown.xib; sourceTree = "<group>"; };
+		85CB4CF523C7B830006E126A /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
+		85CB4CF723C7B84C006E126A /* LocationPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationPickerView.xib; sourceTree = "<group>"; };
+		85ED9DAC23C8F295002966F0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +145,10 @@
 		852F5DF323C65DE0002B01C8 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				85CB4CF123C7B413006E126A /* Dropdown.swift */,
+				85CB4CF323C7B425006E126A /* Dropdown.xib */,
+				85CB4CF523C7B830006E126A /* LocationPickerView.swift */,
+				85CB4CF723C7B84C006E126A /* LocationPickerView.xib */,
 				852F5DFC23C663F8002B01C8 /* SalaryRangePickerView.swift */,
 				852F5DFE23C66418002B01C8 /* SalaryRangePickerView.xib */,
 			);
@@ -268,6 +282,7 @@
 		856F1F1223C51EC500EB81F3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				85ED9DAE23C8F4B1002966F0 /* CollectionView */,
 				856F1F1323C51ECA00EB81F3 /* TableView */,
 			);
 			path = Cells;
@@ -316,8 +331,16 @@
 			children = (
 				856F1F1D23C51F6200EB81F3 /* Array+Elements.swift */,
 				852F5E0023C6770E002B01C8 /* String+Inits.swift */,
+				85ED9DAC23C8F295002966F0 /* Date+Extension.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		85ED9DAE23C8F4B1002966F0 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +405,8 @@
 				856F1F1623C51EE600EB81F3 /* RegionTableViewCell.xib in Resources */,
 				852F5DFF23C66418002B01C8 /* SalaryRangePickerView.xib in Resources */,
 				856F1EE823C5141700EB81F3 /* LaunchScreen.storyboard in Resources */,
+				85CB4CF423C7B425006E126A /* Dropdown.xib in Resources */,
+				85CB4CF823C7B84C006E126A /* LocationPickerView.xib in Resources */,
 				856F1EE523C5141700EB81F3 /* Assets.xcassets in Resources */,
 				856F1F0D23C51E2C00EB81F3 /* TableViewController.xib in Resources */,
 				856F1F2E23C5203E00EB81F3 /* JobTableViewCell.xib in Resources */,
@@ -399,10 +424,13 @@
 			files = (
 				852F5DFD23C663F8002B01C8 /* SalaryRangePickerView.swift in Sources */,
 				856F1F2623C51F6E00EB81F3 /* UIColor+Highlight.swift in Sources */,
+				85ED9DAD23C8F295002966F0 /* Date+Extension.swift in Sources */,
+				85CB4CF223C7B413006E126A /* Dropdown.swift in Sources */,
 				852F5E0123C6770E002B01C8 /* String+Inits.swift in Sources */,
 				856F1EF223C5186D00EB81F3 /* TabBarController.swift in Sources */,
 				856F1F0723C51BB300EB81F3 /* Typealias.swift in Sources */,
 				856F1F4923C5251B00EB81F3 /* ScrollViewController.swift in Sources */,
+				85CB4CF623C7B830006E126A /* LocationPickerView.swift in Sources */,
 				856F1F3023C520DF00EB81F3 /* ViewController.swift in Sources */,
 				856F1F0023C51B2500EB81F3 /* Job.swift in Sources */,
 				856F1F3623C5219E00EB81F3 /* JobViewController.swift in Sources */,

@@ -14,7 +14,7 @@ class NibView: UIView {
 	
 	override var backgroundColor: UIColor? {
 		didSet {
-			nibView.backgroundColor = backgroundColor
+			nibView?.backgroundColor = backgroundColor
 		}
 	}
 	
@@ -45,6 +45,7 @@ class NibView: UIView {
 		)
 		
 		nibView = (nibContent?.first as! UIView)
+		nibView.backgroundColor = backgroundColor
 		addFullSizedSubview(nibView)
 		
 		initialSetup()

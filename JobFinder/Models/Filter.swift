@@ -12,17 +12,25 @@ struct Filter {
 	
 	let text: String?
 	let minimumSalary: Int
+	let region: String?
 	
 	// MARK: - Public
 	func isJobMatching(_ job: Job) -> Bool {
-		if let textUnwrapped = text,
-			textUnwrapped.isEmpty == false,
-			job.name.contains(textUnwrapped) == false {
+		if let text = text,
+			text.isEmpty == false,
+			job.name.contains(text) == false {
 			
 			return false
 		}
 		
 		if minimumSalary > 0 && minimumSalary > (job.salary ?? 0) {
+			return false
+		}
+		
+		if let region = region,
+			region.isEmpty == false,
+			job.region != region {
+			
 			return false
 		}
 		
