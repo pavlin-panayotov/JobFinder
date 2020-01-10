@@ -10,10 +10,12 @@ import UIKit
 
 final class SearchViewController: ScrollViewController {
 	
-	private let textField: UITextField = {
+	private lazy var textField: UITextField = {
 		let textField = UITextField()
 		textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
 		textField.borderStyle = .line
+		textField.returnKeyType = .done
+		textField.delegate = self
 		textField.placeholder = "Позиция"
 		return textField
 	}()
@@ -78,5 +80,13 @@ final class SearchViewController: ScrollViewController {
 	// MARK: - Private
 	private func setupLocationPickerView() {
 		locationPickerView.regions = DataManager.shared.regions.map { $0.name }
+	}
+}
+
+// MARK: UITextFieldDelegate
+extension SearchViewController: UITextFieldDelegate {
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		return true
 	}
 }
