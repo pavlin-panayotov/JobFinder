@@ -13,6 +13,7 @@ struct Filter {
 	let text: String?
 	let minimumSalary: Int
 	let region: String?
+	let contractType: ContractType?
 	
 	// MARK: - Public
 	func isJobMatching(_ job: Job) -> Bool {
@@ -31,6 +32,10 @@ struct Filter {
 			region.isEmpty == false,
 			job.region != region {
 			
+			return false
+		}
+		
+		if let contractType = contractType, job.contractType != contractType {
 			return false
 		}
 		

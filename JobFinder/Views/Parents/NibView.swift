@@ -18,12 +18,6 @@ class NibView: UIView {
 		}
 	}
 	
-	convenience init() {
-		self.init(frame: .zero)
-		
-		loadNibView()
-	}
-	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		

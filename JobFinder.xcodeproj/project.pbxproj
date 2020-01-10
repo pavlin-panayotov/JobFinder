@@ -57,6 +57,9 @@
 		85CB4CF623C7B830006E126A /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB4CF523C7B830006E126A /* LocationPickerView.swift */; };
 		85CB4CF823C7B84C006E126A /* LocationPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85CB4CF723C7B84C006E126A /* LocationPickerView.xib */; };
 		85ED9DAD23C8F295002966F0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED9DAC23C8F295002966F0 /* Date+Extension.swift */; };
+		85ED9DB323C90618002966F0 /* RawRepresentable+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED9DB223C90618002966F0 /* RawRepresentable+Inits.swift */; };
+		85ED9DB723C90979002966F0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED9DB623C90979002966F0 /* UIView+Extension.swift */; };
+		85ED9DB923C909D1002966F0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED9DB823C909D1002966F0 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +115,9 @@
 		85CB4CF523C7B830006E126A /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
 		85CB4CF723C7B84C006E126A /* LocationPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationPickerView.xib; sourceTree = "<group>"; };
 		85ED9DAC23C8F295002966F0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		85ED9DB223C90618002966F0 /* RawRepresentable+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RawRepresentable+Inits.swift"; sourceTree = "<group>"; };
+		85ED9DB623C90979002966F0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		85ED9DB823C909D1002966F0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +311,7 @@
 		856F1F1A23C51F3500EB81F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				85ED9DB423C90679002966F0 /* Swift */,
 				856F1F1C23C51F4C00EB81F3 /* Foundation */,
 				856F1F1B23C51F4000EB81F3 /* UIKit */,
 			);
@@ -321,7 +328,8 @@
 				856F1F2323C51F6E00EB81F3 /* UIStackView+Subviews.swift */,
 				856F1F2023C51F6D00EB81F3 /* UITableView+Cells.swift */,
 				856F1F1F23C51F6D00EB81F3 /* UITableViewCell+Id.swift */,
-				852F5DF623C660FF002B01C8 /* UIView+Subviews.swift */,
+				85ED9DB523C90963002966F0 /* UIView */,
+				85ED9DB823C909D1002966F0 /* UIViewController+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -329,8 +337,6 @@
 		856F1F1C23C51F4C00EB81F3 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				856F1F1D23C51F6200EB81F3 /* Array+Elements.swift */,
-				852F5E0023C6770E002B01C8 /* String+Inits.swift */,
 				85ED9DAC23C8F295002966F0 /* Date+Extension.swift */,
 			);
 			path = Foundation;
@@ -341,6 +347,25 @@
 			children = (
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		85ED9DB423C90679002966F0 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				856F1F1D23C51F6200EB81F3 /* Array+Elements.swift */,
+				85ED9DB223C90618002966F0 /* RawRepresentable+Inits.swift */,
+				852F5E0023C6770E002B01C8 /* String+Inits.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		85ED9DB523C90963002966F0 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				852F5DF623C660FF002B01C8 /* UIView+Subviews.swift */,
+				85ED9DB623C90979002966F0 /* UIView+Extension.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,11 +459,14 @@
 				856F1F3023C520DF00EB81F3 /* ViewController.swift in Sources */,
 				856F1F0023C51B2500EB81F3 /* Job.swift in Sources */,
 				856F1F3623C5219E00EB81F3 /* JobViewController.swift in Sources */,
+				85ED9DB723C90979002966F0 /* UIView+Extension.swift in Sources */,
 				856F1F3A23C521DE00EB81F3 /* DetailsTableViewCell.swift in Sources */,
 				852F5DF523C65E22002B01C8 /* NibView.swift in Sources */,
 				856F1F1923C51F1900EB81F3 /* TableViewCell.swift in Sources */,
 				856F1F4223C5241500EB81F3 /* Constant.swift in Sources */,
 				852F5DFB23C662C2002B01C8 /* NSLayoutConstraint+Deactivate.swift in Sources */,
+				85ED9DB923C909D1002966F0 /* UIViewController+Extension.swift in Sources */,
+				85ED9DB323C90618002966F0 /* RawRepresentable+Inits.swift in Sources */,
 				856F1F2823C51F6E00EB81F3 /* UIStackView+Subviews.swift in Sources */,
 				852F5DF723C660FF002B01C8 /* UIView+Subviews.swift in Sources */,
 				856F1F3323C5211700EB81F3 /* RegionsViewController.swift in Sources */,

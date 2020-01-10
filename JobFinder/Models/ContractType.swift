@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ContractType: String {
+enum ContractType: String, CaseIterable {
 	case unlimited = "безсрочен"
 	case limited = "срочен"
 	case civil = "граждански договор"
