@@ -13,6 +13,7 @@ final class Dropdown: NibView {
 	@IBOutlet private weak var titleLabel: UILabel!
 	@IBOutlet private weak var textField: UITextField!
 	
+	private var hasSelectedItem = false
 	private lazy var picker: UIPickerView = {
 		let picker = UIPickerView()
 		picker.dataSource = self
@@ -36,12 +37,20 @@ final class Dropdown: NibView {
 		set { textField.placeholder = newValue }
 	}
 	
-	var selectedOptionIndex: Int {
+	var selectedOptionIndex: Int? {
+		guard hasSelectedItem else {
+			return nil
+		}
+		
 		return picker.selectedRow(inComponent: 0)
 	}
 	
 	var selectedOption: String? {
-		return options[safe: picker.selectedRow(inComponent: 0)]
+		guard let selectedOptionIndex = selectedOptionIndex else {
+			return nil
+		}
+		
+		return options[safe: selectedOptionIndex]
 	}
 	
 	// MARK: - Overrides
@@ -98,6 +107,7 @@ extension Dropdown: UIPickerViewDelegate {
 
 extension Dropdown: UITextFieldDelegate {
 	func textFieldDidBeginEditing(_ textField: UITextField) {
+		hasSelectedItem = true
 		textField.text = selectedOption
 	}
 }
