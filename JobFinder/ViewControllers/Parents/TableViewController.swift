@@ -12,6 +12,15 @@ class TableViewController: ViewController, UITableViewDataSource, UITableViewDel
 	
 	@IBOutlet private(set) weak var tableView: UITableView!
 	
+	private lazy var noDataLabel: UILabel = {
+		let label = UILabel()
+		label.text = "Няма данни"
+		label.numberOfLines = 0
+		label.textAlignment = .center
+		label.isHidden = true
+		return label
+	}()
+	
 	init() {
 		super.init(
 			nibName: String(describing: TableViewController.self),
@@ -32,6 +41,18 @@ class TableViewController: ViewController, UITableViewDataSource, UITableViewDel
 	// MARK: - Public
 	func setupTableView() {
 		tableView.addEmptyFooterView()
+	}
+	
+	func showNoDataLabel() {
+		if noDataLabel.superview == nil {
+			view.addFullSizedSubview(noDataLabel)
+		}
+		
+		noDataLabel.isHidden = false
+	}
+	
+	func hideNoDataLabel() {
+		noDataLabel.isHidden = true
 	}
 	
 	// MARK: - UITableViewDataSource

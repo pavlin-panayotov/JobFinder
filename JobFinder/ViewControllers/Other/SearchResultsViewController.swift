@@ -26,6 +26,11 @@ final class SearchResultsViewController: TableViewController {
 		super.viewDidLoad()
 		
 		title = "Резултати (\(jobs.count))"
+		
+		if jobs.isEmpty {
+			showNoDataLabel()
+			tableView.isHidden = true
+		}
 	}
 	
 	// MARK: - Overrides
