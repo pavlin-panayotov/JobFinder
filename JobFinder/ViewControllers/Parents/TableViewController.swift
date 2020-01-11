@@ -31,7 +31,7 @@ class TableViewController: ViewController, UITableViewDataSource, UITableViewDel
 	
 	// MARK: - Public
 	func setupTableView() {
-		
+		tableView.addEmptyFooterView()
 	}
 	
 	// MARK: - UITableViewDataSource

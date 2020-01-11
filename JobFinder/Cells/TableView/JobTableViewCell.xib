@@ -43,6 +43,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="contentStackView" destination="rbe-ns-t7X" id="Anv-4A-8eR"/>
                 <outlet property="nameLabel" destination="g3f-fs-gUZ" id="dhq-Dr-iaK"/>
                 <outlet property="salaryLabel" destination="rRN-TE-3AQ" id="en3-te-0VX"/>
             </connections>

@@ -34,6 +34,24 @@ final class AboutUsViewController: TableViewController {
 				return "1.0"
 			}
 		}
+		
+		var cellSelectionStyle: UITableViewCell.SelectionStyle {
+			switch self {
+			case .credits, .jobsSource:
+				return .default
+			case .version:
+				return .none
+			}
+		}
+		
+		var textsAlignment: NSTextAlignment {
+			switch self {
+			case .credits, .jobsSource:
+				return .left
+			case .version:
+				return .center
+			}
+		}
 	}
 	
 	private let dataSource: [Row] = [
@@ -70,19 +88,12 @@ final class AboutUsViewController: TableViewController {
 		let cell = tableView.dequeueReusableCell() as DetailsTableViewCell
 		
 		if let row = dataSource[safe: indexPath.row] {
+			cell.selectionStyle = row.cellSelectionStyle
+			cell.textsAlignment = row.textsAlignment
 			cell.config(
 				title: row.title,
 				value: row.value
 			)
-			
-			cell.selectionStyle = {
-				switch row {
-				case .credits, .jobsSource:
-					return .default
-				case .version:
-					return .none
-				}
-			}()
 		}
 		
 		return cell
