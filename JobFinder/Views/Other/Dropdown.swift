@@ -12,6 +12,7 @@ final class Dropdown: NibView {
 	
 	@IBOutlet private weak var titleLabel: UILabel!
 	@IBOutlet private weak var textField: UITextField!
+	@IBOutlet private weak var contentStackView: UIStackView!
 	
 	private var hasSelectedItem = false
 	private lazy var picker: UIPickerView = {
@@ -37,6 +38,12 @@ final class Dropdown: NibView {
 		set { textField.placeholder = newValue }
 	}
 	
+	// Default `5`.
+	var subviewsSpacing: CGFloat {
+		get { contentStackView.spacing }
+		set { contentStackView.spacing = newValue }
+	}
+	
 	var selectedOptionIndex: Int? {
 		guard hasSelectedItem else {
 			return nil
@@ -57,6 +64,7 @@ final class Dropdown: NibView {
 	override func initialSetup() {
 		super.initialSetup()
 		
+		subviewsSpacing = 5
 		setupTextField()
 	}
 	

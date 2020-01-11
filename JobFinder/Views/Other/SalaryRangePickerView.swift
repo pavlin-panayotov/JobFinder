@@ -12,6 +12,7 @@ final class SalaryRangePickerView: NibView {
 	
 	@IBOutlet private weak var slider: UISlider!
 	@IBOutlet private weak var titleLabel: UILabel!
+	@IBOutlet private weak var contentStackView: UIStackView!
 	
 	private var title: String?
 	private var sliderRange: ClosedRange<Float> = (0...100)
@@ -20,9 +21,16 @@ final class SalaryRangePickerView: NibView {
 		return Int(slider.value)
 	}
 	
+	// Default `5`.
+	var subviewsSpacing: CGFloat {
+		get { contentStackView.spacing }
+		set { contentStackView.spacing = newValue }
+	}
+	
 	override func initialSetup() {
 		super.initialSetup()
 		
+		subviewsSpacing = 5
 		setupSlider()
 		
 		updateSliderValues()

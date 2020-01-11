@@ -22,7 +22,7 @@ final class DetailsTableViewCell: TableViewCell {
 	}
 	
 	// Default `5`.
-	var textsSpacing: CGFloat {
+	var subviewsSpacing: CGFloat {
 		get { contentStackView.spacing }
 		set { contentStackView.spacing = newValue }
 	}
@@ -30,7 +30,7 @@ final class DetailsTableViewCell: TableViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		
-		textsSpacing = 5
+		subviewsSpacing = 5
 		titleLabel.font = UIFont.systemFont(ofSize: 16)
 		valueLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
 		

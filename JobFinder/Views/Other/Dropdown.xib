@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Dropdown">
             <connections>
+                <outlet property="contentStackView" destination="Hlv-OH-FKk" id="yJp-rj-JP7"/>
                 <outlet property="textField" destination="TBo-uL-3An" id="Hkf-7R-onJ"/>
                 <outlet property="titleLabel" destination="Eir-RF-rH9" id="n2f-mR-Rhw"/>
             </connections>

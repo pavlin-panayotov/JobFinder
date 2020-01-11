@@ -10,10 +10,13 @@ import UIKit
 
 final class SearchViewController: ScrollViewController {
 	
-	private lazy var textField: UITextField = {
+	private let contractTypePicker = Dropdown()
+	private let locationPickerView = LocationPickerView()
+	
+	private lazy var positionNameTextField: UITextField = {
 		let textField = UITextField()
 		textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
-		textField.borderStyle = .line
+		textField.borderStyle = .roundedRect
 		textField.returnKeyType = .done
 		textField.delegate = self
 		textField.placeholder = "Позиция"
@@ -43,10 +46,6 @@ final class SearchViewController: ScrollViewController {
 		return pickerView
 	}()
 	
-	private lazy var contractTypePicker = Dropdown()
-	
-	private let locationPickerView = LocationPickerView()
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -57,7 +56,7 @@ final class SearchViewController: ScrollViewController {
 		setupContractTypeDropdown()
 		
 		addScrollSubviews(
-			textField,
+			positionNameTextField,
 			salaryPickerView,
 			contractTypePicker,
 			locationPickerView,
@@ -71,7 +70,7 @@ final class SearchViewController: ScrollViewController {
 		hideKeyboard()
 		
 		let filter = Filter(
-			text: textField.text,
+			text: positionNameTextField.text,
 			minimumSalary: salaryPickerView.minimumSalary,
 			region: locationPickerView.selectedRegion,
 			contractType: ContractType(
@@ -88,13 +87,13 @@ final class SearchViewController: ScrollViewController {
 	
 	// MARK: - Private
 	private func setupLocationPickerView() {
-		locationPickerView.regions = DataManager.shared.regions.map { $0.name }
+		locationPickerView.regions = [""] + DataManager.shared.regions.map { $0.name }
 	}
 	
 	private func setupContractTypeDropdown() {
 		contractTypePicker.title = "Тип на договора"
 		contractTypePicker.placeholder = "Избери"
-		contractTypePicker.options = ContractType.allCases.map { $0.title } + ["всички"]
+		contractTypePicker.options = [""] + ContractType.allCases.map { $0.title }
 	}
 }
 

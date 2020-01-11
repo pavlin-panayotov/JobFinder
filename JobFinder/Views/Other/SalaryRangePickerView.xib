@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SalaryRangePickerView" customModule="JobFinder" customModuleProvider="target">
             <connections>
+                <outlet property="contentStackView" destination="NP7-3y-gcS" id="IkD-UZ-p46"/>
                 <outlet property="slider" destination="fyJ-lb-5Ww" id="MF1-1N-swX"/>
                 <outlet property="titleLabel" destination="kJI-uG-egm" id="dQB-e5-UNg"/>
             </connections>
@@ -21,15 +22,15 @@
                     <rect key="frame" x="20" y="44" width="374" height="156"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-uG-egm">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="96"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="112"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fyJ-lb-5Ww">
-                            <rect key="frame" x="-2" y="96" width="378" height="61"/>
+                            <rect key="frame" x="-2" y="112" width="378" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="gli-Rx-zbU"/>
+                                <constraint firstAttribute="height" priority="950" constant="44" id="gli-Rx-zbU"/>
                             </constraints>
                             <connections>
                                 <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="njR-lh-o73"/>

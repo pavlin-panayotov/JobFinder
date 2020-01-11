@@ -15,7 +15,7 @@ final class JobTableViewCell: TableViewCell {
 	@IBOutlet private weak var contentStackView: UIStackView!
 	
 	// Default `5`.
-	var textsSpacing: CGFloat {
+	var subviewsSpacing: CGFloat {
 		get { contentStackView.spacing }
 		set { contentStackView.spacing = newValue }
 	}
@@ -23,7 +23,7 @@ final class JobTableViewCell: TableViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		
-		textsSpacing = 5
+		subviewsSpacing = 5
 		nameLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
 		salaryLabel.font = UIFont.systemFont(ofSize: 16)
 	}
