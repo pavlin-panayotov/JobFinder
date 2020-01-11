@@ -14,10 +14,14 @@ final class RegionsViewController: TableViewController {
 		return DataManager.shared.regions
 	}
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
+	override init() {
+		super.init()
 		
 		title = "Области"
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
 	}
 	
 	// MARK: - Overrides

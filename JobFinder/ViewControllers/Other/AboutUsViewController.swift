@@ -56,14 +56,18 @@ final class AboutUsViewController: TableViewController {
 	
 	private let dataSource: [Row] = [
 		.jobsSource,
-		.credits,
+//		.credits,
 		.version
 	]
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
+	override init() {
+		super.init()
 		
 		title = "За нас"
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
 	}
 	
 	// MARK: - Overrides

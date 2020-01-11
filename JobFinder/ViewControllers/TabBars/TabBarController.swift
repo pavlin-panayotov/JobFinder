@@ -22,35 +22,20 @@ final class TabBarController: UITabBarController {
 	
 	// MARK: - Private
 	private func createRegionsController() -> UIViewController {
-		let navigationController = NavigationController(
+		return NavigationController(
 			rootViewController: RegionsViewController()
 		)
-		navigationController.tabBarItem = UITabBarItem(
-			tabBarSystemItem: .favorites,
-			tag: 0
-		)
-		return navigationController
 	}
 	
 	private func createSearchViewController() -> UIViewController {
-		let navigationController = NavigationController(
+		return NavigationController(
 			rootViewController: SearchViewController()
 		)
-		navigationController.tabBarItem = UITabBarItem(
-			tabBarSystemItem: .search,
-			tag: 1
-		)
-		return navigationController
 	}
 	
 	private func createAboutUsController() -> UIViewController {
-		let navigationController = NavigationController(
+		return NavigationController(
 			rootViewController: AboutUsViewController()
 		)
-		navigationController.tabBarItem = UITabBarItem(
-			tabBarSystemItem: .favorites,
-			tag: 2
-		)
-		return navigationController
 	}
 }
