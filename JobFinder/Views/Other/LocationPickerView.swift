@@ -31,7 +31,7 @@ final class LocationPickerView: NibView {
 	
 	// MARK: - Private
 	private func setupRegionsDropdown() {
-		regionsDropdown.title = "Регион"
+		regionsDropdown.title = "Област"
 		regionsDropdown.placeholder = "Избери"
 	}
 	

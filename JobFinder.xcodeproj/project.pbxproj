@@ -14,6 +14,7 @@
 		852F5DFD23C663F8002B01C8 /* SalaryRangePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F5DFC23C663F8002B01C8 /* SalaryRangePickerView.swift */; };
 		852F5DFF23C66418002B01C8 /* SalaryRangePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 852F5DFE23C66418002B01C8 /* SalaryRangePickerView.xib */; };
 		852F5E0123C6770E002B01C8 /* String+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F5E0023C6770E002B01C8 /* String+Inits.swift */; };
+		855978C023CA157100A5C5AF /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855978BF23CA157100A5C5AF /* DateFormatterManager.swift */; };
 		856F1EDC23C5141500EB81F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1EDB23C5141500EB81F3 /* AppDelegate.swift */; };
 		856F1EDE23C5141500EB81F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F1EDD23C5141500EB81F3 /* SceneDelegate.swift */; };
 		856F1EE523C5141700EB81F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856F1EE423C5141700EB81F3 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		852F5DFC23C663F8002B01C8 /* SalaryRangePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryRangePickerView.swift; sourceTree = "<group>"; };
 		852F5DFE23C66418002B01C8 /* SalaryRangePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalaryRangePickerView.xib; sourceTree = "<group>"; };
 		852F5E0023C6770E002B01C8 /* String+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Inits.swift"; sourceTree = "<group>"; };
+		855978BF23CA157100A5C5AF /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
 		856F1ED823C5141500EB81F3 /* JobFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		856F1EDB23C5141500EB81F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		856F1EDD23C5141500EB81F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				856F1EFC23C51B0500EB81F3 /* DataManager.swift */,
+				855978BF23CA157100A5C5AF /* DateFormatterManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				85ED9DB723C90979002966F0 /* UIView+Extension.swift in Sources */,
 				856F1F3A23C521DE00EB81F3 /* DetailsTableViewCell.swift in Sources */,
 				852F5DF523C65E22002B01C8 /* NibView.swift in Sources */,
+				855978C023CA157100A5C5AF /* DateFormatterManager.swift in Sources */,
 				856F1F1923C51F1900EB81F3 /* TableViewCell.swift in Sources */,
 				856F1F4223C5241500EB81F3 /* Constant.swift in Sources */,
 				852F5DFB23C662C2002B01C8 /* NSLayoutConstraint+Deactivate.swift in Sources */,

@@ -10,6 +10,32 @@ import Foundation
 
 struct Job {
 	
+	struct EntryInfo {
+		let entryDate: Date
+		let entryNumber: String
+		
+		private var formattedEntryDate: String {
+			return DateFormatterManager.shared.displayDateFormatter.string(from: entryDate)
+		}
+		
+		var formattedString: String {
+			return "\(entryNumber) - \(formattedEntryDate)"
+		}
+		
+		init?(data: JSON) {
+			guard
+				let entryDateString = Job.getStringValue(for: "vhdate", from: data),
+				let entryDate = DateFormatterManager.shared.responseDateFormatter.date(from: entryDateString),
+				let entryNumber = Job.getStringValue(for: "vhn", from: data)
+				else {
+					return nil
+			}
+			
+			self.entryDate = entryDate
+			self.entryNumber = entryNumber
+		}
+	}
+	
 	let id: String
 	let name: String
 	let nameCode: String
@@ -18,6 +44,10 @@ struct Job {
 	let workingHoursDuration: Int
 	let url: URL
 	let contractType: ContractType
+	
+	let entryInfo: EntryInfo?
+	let expiryDate: Date
+	let freeFromDate: Date
 	
 	let laborOffice: String
 	let laborOfficeCode: String
@@ -37,6 +67,10 @@ struct Job {
 			let url = URL(string: urlString),
 			let contractTypeString = Self.getStringValue(for: "contracttype", from: data),
 			let contractType = ContractType(rawValue: contractTypeString.lowercased()),
+			let expiryDateString = Self.getStringValue(for: "expdate", from: data),
+			let expiryDate = DateFormatterManager.shared.responseDateFormatter.date(from: expiryDateString),
+			let freeFromDateString = Self.getStringValue(for: "freefrom", from: data),
+			let freeFromDate = DateFormatterManager.shared.responseDateFormatter.date(from: freeFromDateString),
 			let laborOffice = Self.getStringValue(for: "dbtname", from: data),
 			let laborOfficeCode = Self.getStringValue(for: "dbtcode", from: data),
 			let region = Self.getStringValue(for: "region", from: data),
@@ -56,6 +90,11 @@ struct Job {
 		self.workingHoursDuration = workingHoursDuration
 		self.url = url
 		self.contractType = contractType
+		
+		self.entryInfo = EntryInfo(data: data)
+		self.expiryDate = expiryDate
+		self.freeFromDate = freeFromDate
+		
 		self.laborOffice = laborOffice
 		self.laborOfficeCode = laborOfficeCode
 		self.region = region

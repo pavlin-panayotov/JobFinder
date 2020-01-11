@@ -20,6 +20,9 @@ final class JobViewController: TableViewController {
 		case freePositions(value: Int)
 		case workingHoursDuration(value: Int)
 		case contractType(value: ContractType)
+		case entryInfo(value: String)
+		case freeFrom(date: String)
+		case expiryDate(value: String)
 		
 		var data: (title: String, value: String) {
 			switch self {
@@ -41,6 +44,12 @@ final class JobViewController: TableViewController {
 				return ("Работни часове", String(value))
 			case let .contractType(value):
 				return ("Тип на договора", value.title)
+			case let .entryInfo(value):
+				return ("Номер и дата на заявката", "\(value)")
+			case let .freeFrom(value):
+				return ("Дата, от която работното място е свободно", value)
+			case let .expiryDate(value):
+				return ("Срок на валидност на заявката", value)
 			}
 		}
 	}
@@ -56,10 +65,17 @@ final class JobViewController: TableViewController {
 			.salary(value: job.salary),
 			.laborOffice(value: job.laborOffice),
 			.region(value: job.region),
-			.municipality(value: job.municipality),
+//			.municipality(value: job.municipality),
 			.freePositions(value: job.freePositions),
 			.workingHoursDuration(value: job.workingHoursDuration),
-			.contractType(value: job.contractType)
+			.contractType(value: job.contractType),
+			.entryInfo(value: job.entryInfo?.formattedString ?? "-"),
+			.freeFrom(
+				date: DateFormatterManager.shared.displayDateFormatter.string(from: job.freeFromDate)
+			),
+			.expiryDate(
+				value: DateFormatterManager.shared.displayDateFormatter.string(from: job.expiryDate)
+			),
 		]
 		
 		super.init()

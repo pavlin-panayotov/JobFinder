@@ -17,7 +17,7 @@ final class RegionsViewController: TableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		title = "Региони"
+		title = "Области"
 	}
 	
 	// MARK: - Overrides
