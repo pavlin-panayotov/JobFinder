@@ -24,9 +24,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		
 		window = UIWindow(frame: UIScreen.main.bounds)
-		window?.rootViewController = TabBarController()
+		window?.rootViewController = LoadingViewController()
 		window?.makeKeyAndVisible()
 		window?.windowScene = windowScene
+		
+		DataManager.shared.loadData { [weak self] in
+			self?.window?.rootViewController = TabBarController()
+		}
 	}
 	
 	func sceneDidDisconnect(_ scene: UIScene) {

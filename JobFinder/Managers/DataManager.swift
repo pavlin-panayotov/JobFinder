@@ -16,10 +16,6 @@ final class DataManager {
 	private(set) var regions: [Region] = []
 	private(set) var greatestSalary = 0
 	
-	init() {
-		loadData()
-	}
-	
 	// MARK: - Private
 	private func loadData() {
 		guard
@@ -53,6 +49,16 @@ final class DataManager {
 	}
 	
 	// MARK: - Public
+	func loadData(completion: @escaping VoidClosure) {
+		DispatchQueue.global().async { [unowned self] in
+			self.loadData()
+			
+			DispatchQueue.main.async {
+				completion()
+			}
+		}
+	}
+	
 	func jobs(forFilter filter: Filter) -> [Job] {
 		return jobs.filter(filter.isJobMatching)
 	}
