@@ -11,8 +11,10 @@ import UIKit
 final class JobViewController: TableViewController {
 	
 	private enum Row {
-		case name(value: String)
+		case name(title: String, code: String)
+		case id(value: String)
 		case salary(value: Int?)
+		case laborOffice(value: String)
 		case region(value: String)
 		case municipality(value: String)
 		case freePositions(value: Int)
@@ -21,10 +23,14 @@ final class JobViewController: TableViewController {
 		
 		var data: (title: String, value: String) {
 			switch self {
-			case let .name(value):
-				return ("Позиция", value)
+			case let .name(title, code):
+				return ("Позиция", "\(code) - \(title)")
+			case let .id(value):
+				return ("Номер на обявата", value)
 			case let .salary(value):
 				return ("Заплата", value.map { String($0) } ?? "-")
+			case let .laborOffice(value):
+				return ("Дирекция \"Бюро по труда\"", value)
 			case let .region(value):
 				return ("Област", value)
 			case let .municipality(value):
@@ -45,8 +51,10 @@ final class JobViewController: TableViewController {
 	init(job: Job) {
 		self.job = job
 		rows = [
-			.name(value: job.name),
+			.name(title: job.name, code: job.nameCode),
+			.id(value: job.id),
 			.salary(value: job.salary),
+			.laborOffice(value: job.laborOffice),
 			.region(value: job.region),
 			.municipality(value: job.municipality),
 			.freePositions(value: job.freePositions),
@@ -65,6 +73,13 @@ final class JobViewController: TableViewController {
 		super.viewDidLoad()
 		
 		title = "Описание на позицията"
+		
+		navigationItem.rightBarButtonItem = UIBarButtonItem(
+			title: "Преглед",
+			style: .plain,
+			target: self,
+			action: #selector(openInBrowser)
+		)
 	}
 	
 	// MARK: - Overrides
@@ -72,6 +87,12 @@ final class JobViewController: TableViewController {
 		super.setupTableView()
 		
 		tableView.register(cellType: DetailsTableViewCell.self)
+	}
+	
+	// MARK: - Actions
+	@objc
+	private func openInBrowser() {
+		UIApplication.shared.open(job.url, options: [:], completionHandler: nil)
 	}
 	
 	// MARK: - UITableViewDataSource
