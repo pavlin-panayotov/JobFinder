@@ -44,6 +44,18 @@ final class SearchViewController: ScrollViewController {
 		return pickerView
 	}()
 	
+	private lazy var keyboardBlockingGesture: UITapGestureRecognizer = {
+		let tapGestureRecognizer = UITapGestureRecognizer()
+		tapGestureRecognizer.addTarget(self, action: #selector(keyboardBlockingViewTapped))
+		return tapGestureRecognizer
+	}()
+	
+	private lazy var keyboardBlockingView: UIView = {
+		let blockingView = UIView()
+		blockingView.addGestureRecognizer(keyboardBlockingGesture)
+		return blockingView
+	}()
+	
 	override init() {
 		super.init()
 		
@@ -71,6 +83,38 @@ final class SearchViewController: ScrollViewController {
 		)
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(keyboardWillShow),
+			name: UIViewController.keyboardWillShowNotification,
+			object: nil
+		)
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(keyboardWillHide),
+			name: UIViewController.keyboardWillHideNotification,
+			object: nil
+		)
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		
+		NotificationCenter.default.removeObserver(
+			self,
+			name: UIViewController.keyboardWillShowNotification,
+			object: nil
+		)
+		NotificationCenter.default.removeObserver(
+			self,
+			name: UIViewController.keyboardWillHideNotification,
+			object: nil
+		)
+	}
+	
 	// MARK: - Actions
 	@objc
 	private func searchButtonTapped(_ sender: Any) {
@@ -92,6 +136,11 @@ final class SearchViewController: ScrollViewController {
 		)
 	}
 	
+	@objc
+	private func keyboardBlockingViewTapped(_ sender: Any) {
+		hideKeyboard()
+	}
+	
 	// MARK: - Private
 	private func setupLocationPickerView() {
 		locationPickerView.regions = [""] + DataManager.shared.regions.map { $0.name }
@@ -102,9 +151,44 @@ final class SearchViewController: ScrollViewController {
 		contractTypePicker.placeholder = "Избери"
 		contractTypePicker.options = [""] + ContractType.allCases.map { $0.title }
 	}
+	
+	private func showKeyboardBlockingView() {
+		hideKeyboardBlockingView()
+		
+		view.addFullSizedSubview(
+			keyboardBlockingView,
+			bottomPadding: scrollView.contentInset.bottom
+		)
+	}
+	
+	private func hideKeyboardBlockingView() {
+		keyboardBlockingView.removeFromSuperview()
+	}
+	
+	// MARK: - Notifications
+	@objc
+	private func keyboardWillShow(_ notificaiton: Notification) {
+		guard
+			let rawKeyboardFrame = notificaiton.userInfo?[UIResponder.keyboardFrameEndUserInfoKey],
+			let keyboardFrame = (rawKeyboardFrame as? NSValue)?.cgRectValue
+			else {
+				return
+		}
+		
+		scrollView.contentInset.bottom = keyboardFrame.height - (tabBarController?.tabBar.bounds.height ?? 0)
+		scrollView.verticalScrollIndicatorInsets.bottom = scrollView.contentInset.bottom
+		showKeyboardBlockingView()
+	}
+	
+	@objc
+	private func keyboardWillHide(_ notificaiton: Notification) {
+		scrollView.contentInset.bottom = 0
+		scrollView.verticalScrollIndicatorInsets.bottom = scrollView.contentInset.bottom
+		hideKeyboardBlockingView()
+	}
 }
 
-// MARK: UITextFieldDelegate
+// MARK: - UITextFieldDelegate
 extension SearchViewController: UITextFieldDelegate {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		hideKeyboard()

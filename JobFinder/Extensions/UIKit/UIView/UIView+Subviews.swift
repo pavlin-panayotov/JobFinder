@@ -11,16 +11,22 @@ import UIKit
 extension UIView {
 	
 	// MARK: - Add
-	func addFullSizedSubview(_ view: UIView) {
+	func addFullSizedSubview(
+		_ view: UIView,
+		topPadding: CGFloat = 0,
+		trailingPadding: CGFloat = 0,
+		bottomPadding: CGFloat = 0,
+		leadingPadding: CGFloat = 0) {
+		
 		addSubview(view)
 		
 		view.translatesAutoresizingMaskIntoConstraints = false
 		
 		NSLayoutConstraint.activate(
-			view.leadingAnchor.constraint(equalTo: leadingAnchor),
-			view.trailingAnchor.constraint(equalTo: trailingAnchor),
-			view.bottomAnchor.constraint(equalTo: bottomAnchor),
-			view.topAnchor.constraint(equalTo: topAnchor)
+			view.topAnchor.constraint(equalTo: topAnchor, constant: topPadding),
+			trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: trailingPadding),
+			bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomPadding),
+			view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: leadingPadding)
 		)
 	}
 	
