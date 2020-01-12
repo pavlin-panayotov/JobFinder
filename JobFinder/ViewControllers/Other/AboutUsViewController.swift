@@ -13,6 +13,7 @@ final class AboutUsViewController: TableViewController {
 	private enum Row {
 		case credits
 		case jobsSource
+		case appSource
 		case version
 		
 		var title: String {
@@ -21,6 +22,8 @@ final class AboutUsViewController: TableViewController {
 				return "Credits"
 			case .jobsSource:
 				return "Източник на информацията"
+			case .appSource:
+				return "Източник на приложението"
 			case .version:
 				return "Версия"
 			}
@@ -28,7 +31,7 @@ final class AboutUsViewController: TableViewController {
 		
 		var value: String? {
 			switch self {
-			case .credits, .jobsSource:
+			case .credits, .jobsSource, .appSource:
 				return nil
 			case .version:
 				return "1.0"
@@ -37,7 +40,7 @@ final class AboutUsViewController: TableViewController {
 		
 		var cellSelectionStyle: UITableViewCell.SelectionStyle {
 			switch self {
-			case .credits, .jobsSource:
+			case .credits, .jobsSource, .appSource:
 				return .default
 			case .version:
 				return .none
@@ -46,7 +49,7 @@ final class AboutUsViewController: TableViewController {
 		
 		var textsAlignment: NSTextAlignment {
 			switch self {
-			case .credits, .jobsSource:
+			case .credits, .jobsSource, .appSource:
 				return .left
 			case .version:
 				return .center
@@ -57,7 +60,8 @@ final class AboutUsViewController: TableViewController {
 	private let dataSource: [Row] = [
 		.jobsSource,
 //		.credits,
-		.version
+		.appSource,
+		.version,
 	]
 	
 	override init() {
@@ -120,6 +124,13 @@ final class AboutUsViewController: TableViewController {
 		case .jobsSource:
 			UIApplication.shared.open(
 				Constant.Url.jobsSource,
+				options: [:],
+				completionHandler: nil
+			)
+			
+		case .appSource:
+			UIApplication.shared.open(
+				Constant.Url.appSource,
 				options: [:],
 				completionHandler: nil
 			)

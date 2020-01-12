@@ -11,5 +11,6 @@ import Foundation
 struct Constant {
 	struct Url {
 		static let jobsSource = URL(string: "https://data.egov.bg/organisation/dataset/073bb9c8-5361-43ea-971d-216ed5c24089")!
+		static let appSource = URL(string: "https://github.com/pavlin-panayotov/JobFinder")!
 	}
 }
