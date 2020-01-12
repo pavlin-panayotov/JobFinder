@@ -12,13 +12,23 @@ final class SalaryRangePickerView: NibView {
 	
 	@IBOutlet private weak var slider: UISlider!
 	@IBOutlet private weak var titleLabel: UILabel!
+	@IBOutlet private weak var salaryTextField: UITextField!
 	@IBOutlet private weak var contentStackView: UIStackView!
 	
-	private var title: String?
 	private var sliderRange: ClosedRange<Float> = (0...100)
 	
 	var minimumSalary: Int {
 		return Int(slider.value)
+	}
+	
+	var title: String? {
+		get { titleLabel.text }
+		set { titleLabel.text = newValue }
+	}
+	
+	var placeholder: String? {
+		get { salaryTextField.placeholder }
+		set { salaryTextField.placeholder = newValue }
 	}
 	
 	// Default `5`.
@@ -31,38 +41,32 @@ final class SalaryRangePickerView: NibView {
 		super.initialSetup()
 		
 		subviewsSpacing = 5
-		setupSlider()
+		salaryTextField.keyboardType = .numberPad
+		salaryTextField.textAlignment = .right
+		salaryTextField.delegate = self
 		
 		updateSliderValues()
-		updateTitle()
+		updateInput()
 	}
 	
 	// MARK: - Actions
 	@IBAction private func sliderValueChanged(_ sender: Any) {
-		updateTitle()
+		updateInput()
+	}
+	
+	@IBAction func salaryTextFieldEditingChanged(_ sender: Any) {
+		guard
+			let inputString = salaryTextField.text,
+			let inputNumber = Float(inputString) else {
+				return
+		}
+		
+		slider.value = min(inputNumber, slider.maximumValue)
 	}
 	
 	// MARK: - Private
-	private func setupSlider() {
-		
-	}
-	
-	private func updateTitle() {
-		let sliderValue: String = {
-			guard slider.value > 0 else {
-				return "-"
-			}
-			
-			return String(float: slider.value, precision: 0)
-		}()
-		
-		titleLabel.text = {
-			guard let title = title else {
-				return sliderValue
-			}
-			
-			return "\(title): \(sliderValue)"
-		}()
+	private func updateInput() {
+		salaryTextField.text = String(float: slider.value, precision: 0)
 	}
 	
 	private func updateSliderValues() {
@@ -72,11 +76,17 @@ final class SalaryRangePickerView: NibView {
 	}
 	
 	// MARK: - Public
-	func config(title: String, salaryRange: ClosedRange<Int>) {
-		self.title = title
+	func config(salaryRange: ClosedRange<Int>) {
 		sliderRange = Float(salaryRange.lowerBound)...Float(salaryRange.upperBound)
 		
 		updateSliderValues()
-		updateTitle()
+		updateInput()
+	}
+}
+
+// MARK: - UITextFieldDelegate
+extension SalaryRangePickerView: UITextFieldDelegate {
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		updateInput()
 	}
 }

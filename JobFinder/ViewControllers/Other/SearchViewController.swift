@@ -39,10 +39,8 @@ final class SearchViewController: ScrollViewController {
 	
 	private lazy var salaryPickerView: SalaryRangePickerView = {
 		let pickerView = SalaryRangePickerView()
-		pickerView.config(
-			title: "Минимална заплата",
-			salaryRange: 0...DataManager.shared.greatestSalary
-		)
+		pickerView.title = "Минимална заплата:"
+		pickerView.config(salaryRange: 0...DataManager.shared.greatestSalary)
 		return pickerView
 	}()
 	

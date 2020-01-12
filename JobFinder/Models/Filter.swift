@@ -19,7 +19,7 @@ struct Filter {
 	func isJobMatching(_ job: Job) -> Bool {
 		if let text = text,
 			text.isEmpty == false,
-			job.name.contains(text) == false {
+			job.name.range(of: text, options: .caseInsensitive) == nil {
 			
 			return false
 		}

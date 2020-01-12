@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SalaryRangePickerView" customModule="JobFinder" customModuleProvider="target">
             <connections>
                 <outlet property="contentStackView" destination="NP7-3y-gcS" id="IkD-UZ-p46"/>
+                <outlet property="salaryTextField" destination="gDh-V6-tFq" id="Li5-6T-ZWE"/>
                 <outlet property="slider" destination="fyJ-lb-5Ww" id="MF1-1N-swX"/>
                 <outlet property="titleLabel" destination="kJI-uG-egm" id="dQB-e5-UNg"/>
             </connections>
@@ -21,12 +22,25 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NP7-3y-gcS">
                     <rect key="frame" x="20" y="44" width="374" height="156"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-uG-egm">
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OLN-jh-JAk">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="112"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-uG-egm">
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="112"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gDh-V6-tFq">
+                                    <rect key="frame" x="52" y="0.0" width="322" height="112"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="salaryTextFieldEditingChanged:" destination="-1" eventType="editingChanged" id="Nux-Ch-aEB"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                        </stackView>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fyJ-lb-5Ww">
                             <rect key="frame" x="-2" y="112" width="378" height="45"/>
                             <constraints>
